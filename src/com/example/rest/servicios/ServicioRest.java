@@ -83,7 +83,7 @@ public class ServicioRest {
 	}
 	@POST
 	@Path("/cliente")
-	public Response registraCliente(Cliente obj) {
+	public Response registracliente(Cliente obj) {
 		log.info("Registra cliente " + obj.getIdCliente());
 		if (daoCli.insertacliente(obj) > 0)
 			return Response.ok().build();
@@ -148,7 +148,7 @@ public Response eliminaproducto(@PathParam("idProducto") int id) {
 	@GET
 	@Path("/marca")
 	public Response listarMarcaTodos() {
-		log.info("listars marca rest ");
+		log.info("listar marca rest ");
 		return Response.ok(daoMarca.listarMarcaTodos()).build();
 	}
 
@@ -175,7 +175,7 @@ public Response eliminaproducto(@PathParam("idProducto") int id) {
 	@DELETE
 	@Path("/marca/{idMarca}")
 	public Response eliminaMarca(@PathParam("idMarca") int id) {
-		log.info("Elimina usuario " + id);
+		log.info("Elimina marca " + id);
 		if (daoMarca.eliminaMarca(id) > 0)
 			return Response.ok().build();
 		else

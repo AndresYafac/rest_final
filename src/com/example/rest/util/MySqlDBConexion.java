@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 
 public class MySqlDBConexion {
 
-	private static ResourceBundle rb = ResourceBundle.getBundle("database",Locale.US);
+	private static ResourceBundle rb = ResourceBundle.getBundle("database",Locale.getDefault());
 
 	static {
 		try {

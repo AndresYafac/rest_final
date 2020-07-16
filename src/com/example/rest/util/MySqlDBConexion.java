@@ -3,12 +3,13 @@ package com.example.rest.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class MySqlDBConexion {
 
-	private static ResourceBundle rb = ResourceBundle.getBundle("database");
+	private static ResourceBundle rb = ResourceBundle.getBundle("database",Locale.US);
+
 	static {
 		try {
 			Class.forName(rb.getString("driver"));

@@ -5,15 +5,26 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+      <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
+        
+        
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
+        
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
@@ -24,8 +35,7 @@
       </plugin>
     </plugins>
   </build>
-  
-  <dependencies>
+  	<dependencies>
 	
 		<dependency>
 		    <groupId>commons-logging</groupId>
@@ -87,4 +97,5 @@
 		
 		
 	</dependencies>
+  
 </project>
